@@ -2,3 +2,11 @@
     margin-left: 120px;
     margin-right: 120px;
 }
+
+input[type=button] {
+    margin: 16% 0 0 35%;
+    border-radius: 28px;
+    font-family: 'Segoe UI';
+    font-size: 42px;
+    padding: 10px 20px 10px 20px;
+}
