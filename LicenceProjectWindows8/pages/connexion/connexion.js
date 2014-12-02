@@ -51,7 +51,7 @@
         WinJS.xhr(options).done(
             function success(req) {
                 var hashedKey = req.response;
-                WinJS.Navigation.navigate(adminHome, { keyaaa: hashedKey });
+                WinJS.Navigation.navigate(adminHome, { key: hashedKey });
             }
             ,
             function error(err) {

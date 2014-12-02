@@ -7,9 +7,9 @@
         // Cette fonction est appelée chaque fois qu'un utilisateur accède à cette page. Elle
         // remplit les éléments de la page avec les données d'application.
         ready: function (element, options) {
-            // TODO: initialisez la page ici.
+            var hashedKey = "";
             if (WinJS.Navigation.state.key) {
-                $hashedKey = WinJS.Navigation.state.key;
+                hashedKey = WinJS.Navigation.state.key;
             }
         },
 
