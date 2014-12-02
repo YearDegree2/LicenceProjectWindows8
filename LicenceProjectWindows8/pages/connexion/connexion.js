@@ -27,15 +27,15 @@
                     WinJS.xhr(options).done(
                         //success and error handlers
                         function success(req) {
-                            var cleCrypte = req.response;
-                            window.location.href = adminHome;
+                            var hashedKey = req.response;
+                            WinJS.Navigation.navigate(adminHome, { keyaaa: hashedKey });
                         }
                         ,
                         function error(err) {
                             //var erreur = err.response;
                             var statusCode = err.status;
                             if (statusCode != 200) {
-                                Windows.UI.Popups.MessageDialog("Identifiant ou Mot de passe invalide").showAsync();
+                                Windows.UI.Popups.MessageDialog("Identifiant ou mot de passe invalide").showAsync();
                             }
                             return;
                         }

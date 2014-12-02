@@ -8,6 +8,9 @@
         // remplit les éléments de la page avec les données d'application.
         ready: function (element, options) {
             // TODO: initialisez la page ici.
+            if (WinJS.Navigation.state.key) {
+                $hashedKey = WinJS.Navigation.state.key;
+            }
         },
 
         unload: function () {
