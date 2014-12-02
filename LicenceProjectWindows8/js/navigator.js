@@ -22,8 +22,8 @@
                     });
                 };
 
-                addRemovableEventListener(nav, 'navigating', this._navigating.bind(this), false);
-                addRemovableEventListener(nav, 'navigated', this._navigated.bind(this), false);
+                addRemovableEventListener(nav, "navigating", this._navigating.bind(this), false);
+                addRemovableEventListener(nav, "navigated", this._navigated.bind(this), false);
 
                 window.onresize = this._resized.bind(this);
 

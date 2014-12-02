@@ -4,3 +4,4 @@ var beginAddress = "http://localhost/LicenceProject/web";
 // All pages
 var connexion = "/pages/connexion/connexion.html";
 var home = "/pages/home/home.html";
+var adminHome = "/pages/adminHome/adminHome.html";

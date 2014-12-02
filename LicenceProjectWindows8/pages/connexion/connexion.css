@@ -2,3 +2,19 @@
     margin-left: 120px;
     margin-right: 120px;
 }
+
+#sectionConnexion {
+    position:absolute;
+    left:50%;
+    width:300px; 
+    margin-left:-150px;
+    margin-top:10%;
+}
+
+#sendFormConnexion {
+    position:absolute;
+    left:50%;
+    margin-left:-50px;
+    margin-top:20px;
+    cursor:pointer;
+}

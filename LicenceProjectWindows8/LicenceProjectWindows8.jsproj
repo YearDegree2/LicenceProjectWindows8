@@ -63,6 +63,9 @@
     <Content Include="js\variable.js" />
     <Content Include="js\default.js" />
     <Content Include="js\navigator.js" />
+    <Content Include="pages\adminHome\adminHome.css" />
+    <Content Include="pages\adminHome\adminHome.html" />
+    <Content Include="pages\adminHome\adminHome.js" />
     <Content Include="pages\connexion\connexion.css" />
     <Content Include="pages\connexion\connexion.html" />
     <Content Include="pages\connexion\connexion.js" />
