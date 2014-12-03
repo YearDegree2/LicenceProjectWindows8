@@ -3,6 +3,9 @@
     margin-right: 120px;
 }
 
-.titlearea {
-    text-align: center;
+.win-listview 
+{
+    height: 90%; 
+    width: 90%;
 }
+

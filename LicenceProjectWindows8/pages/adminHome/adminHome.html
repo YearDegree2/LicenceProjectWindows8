@@ -18,11 +18,29 @@
     <div class="adminHome fragment">
         <header aria-label="Header content" role="banner">
             <h1 class="titlearea win-type-ellipsis">
-                <span class="pagetitle">Bienvenue dans adminHome</span>
+                <span class="pagetitle">Administration</span>
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <p>Connexion reussie !!</p>
+            <div id="mediumListIconTextTemplate"
+                 data-win-control="WinJS.Binding.Template">
+
+                <div style="width: 100%; height: 100%;">
+                    <!-- Displays the "picture" field. -->
+                    <img src=" #" style="width: 250px; height: 250px;"
+                         data-win-bind="alt: title; src: picture" />
+                    <div>
+                        <!-- Displays the "title" field. -->
+                        <h4 data-win-bind="innerText: title"></h4>
+                        <!-- Displays the "text" field. -->
+                        <h6 data-win-bind="innerText: text"></h6>
+                    </div>
+                </div>
+            </div>
+            <div id="basicListView" data-win-control="WinJS.UI.ListView"
+                 data-win-options="{itemDataSource : DataExample.itemList.dataSource,
+                                    itemTemplate: select('#mediumListIconTextTemplate')}">
+            </div>
         </section>
     </div>
 </body>
