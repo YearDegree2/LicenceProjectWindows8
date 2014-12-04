@@ -34,18 +34,18 @@
         }
     });
     var dataArray = [
-  { title: "Basic banana", text: "Low-fat frozen yogurt", picture: "../../images/60banana.png", link: "/pages/page1/page1.html" },
-  { title: "Banana blast", text: "Ice cream", picture: "../../images/60banana.png", link: "/pages/page2/page2.html" },
-  { title: "Brilliant citron", text: "Frozen custard", picture: "../../images/60Lemon.png", link: "/pages/page3/page3.html" },
-  { title: "Orange surprise", text: "Sherbet", picture: "../../images/60orange.png", link: "/pages/page1/page1.html" },
-  { title: "Original orange", text: "Sherbet", picture: "../../images/60orange.png", link: "/pages/page1/page1.html" },
-  { title: "Vanilla", text: "Ice cream", picture: "../../images/60vanilla.png", link: "/pages/page1/page1.html" },
-  { title: "Very vanilla", text: "Frozen custard", picture: "../../images/60vanilla.png", link: "/pages/page1/page1.html" },
-  { title: "Marvelous mint", text: "Gelato", picture: "../../images/60mint.png", link: "/pages/page1/page1.html" },
-  { title: "Basic banana", text: "Low-fat frozen yogurt", picture: "../../images/60banana.png", link: "/pages/page1/page1.html" },
-  { title: "Banana blast", text: "Ice cream", picture: "../../images/60banana.png", link: "/pages/page1/page1.html" },
-  { title: "Brilliant citron", text: "Frozen custard", picture: "../../images/60Lemon.png", link: "/pages/page1/page1.html" },
-  { title: "Orange surprise", text: "Sherbet", picture: "../../images/60orange.png", link: "/pages/page1/page1.html" },
+  { title: "Basic banana", text: "Low-fat frozen yogurt", picture: "/images/60banana.png", link: "/pages/page1/page1.html" },
+  { title: "Banana blast", text: "Ice cream", picture: "/images/60banana.png", link: "/pages/page2/page2.html" },
+  { title: "Brilliant citron", text: "Frozen custard", picture: "/images/60Lemon.png", link: "/pages/page3/page3.html" },
+  { title: "Orange surprise", text: "Sherbet", picture: "/images/60orange.png", link: "/pages/page1/page1.html" },
+  { title: "Original orange", text: "Sherbet", picture: "/images/60orange.png", link: "/pages/page1/page1.html" },
+  { title: "Vanilla", text: "Ice cream", picture: "/images/60vanilla.png", link: "/pages/page1/page1.html" },
+  { title: "Very vanilla", text: "Frozen custard", picture: "/images/60vanilla.png", link: "/pages/page1/page1.html" },
+  { title: "Marvelous mint", text: "Gelato", picture: "/images/60mint.png", link: "/pages/page1/page1.html" },
+  { title: "Basic banana", text: "Low-fat frozen yogurt", picture: "/images/60banana.png", link: "/pages/page1/page1.html" },
+  { title: "Banana blast", text: "Ice cream", picture: "/images/60banana.png", link: "/pages/page1/page1.html" },
+  { title: "Brilliant citron", text: "Frozen custard", picture: "/images/60Lemon.png", link: "/pages/page1/page1.html" },
+  { title: "Orange surprise", text: "Sherbet", picture: "/images/60orange.png", link: "/pages/page1/page1.html" },
     ];
 
     var dataList = new WinJS.Binding.List(dataArray);

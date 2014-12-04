@@ -10,34 +10,26 @@
             WinJS.UI.processAll().done(function () {
                 // Cette fonction est appelée une fois la page chargé (processAll()).
                 var anchor = document.getElementById("sendFormConnexion");
-                anchor.addEventListener("click", clickEventHandlerToadminHome);
+                anchor.addEventListener("click", clickEventHandlerToAdminHome);
                 document.getElementById("_username").addEventListener("keypress", function (e) {
                     var key = e.which || e.keyCode;
                     if (key == 13) {
-                        clickEventHandlerToadminHome();
+                        clickEventHandlerToAdminHome();
                     }
                 });
                 document.getElementById("_password").addEventListener("keypress", function (e) {
                     var key = e.which || e.keyCode;
                     if (key == 13) { 
-                        clickEventHandlerToadminHome();
+                        clickEventHandlerToAdminHome();
                     }
                 });
             });
-        },
-        unload: function () {
-            // TODO: répondre aux navigations en dehors de cette page.
-        },
-        updateLayout: function (element) {
-            /// <param name="element" domElement="true" />
-
-            // TODO: répondez aux modifications de la disposition.
         }
     });
 
-    function clickEventHandlerToadminHome () {
+    function clickEventHandlerToAdminHome () {
         // Cette fonction est appelée lors d'un click sur
-        // le bouton Envoyer ou sur le bouton Enter.
+        // le bouton Envoyer ou d'un appui sur la touche Enter.
         var objData = {};
         objData.username = document.getElementById("_username").value;
         objData.password = document.getElementById("_password").value;
