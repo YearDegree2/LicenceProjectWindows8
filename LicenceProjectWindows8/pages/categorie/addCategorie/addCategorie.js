@@ -87,7 +87,7 @@
                         Windows.UI.Popups.MessageDialog("Attributs name_fr ou name_en manquant").showAsync();
                     }
                     else {
-                        Windows.UI.Popups.MessageDialog("Une erreur s'est produite.").showAsync();
+                        Windows.UI.Popups.MessageDialog("Cet ID est déjà présent dans la base de données").showAsync();
                     }
                 }
             }

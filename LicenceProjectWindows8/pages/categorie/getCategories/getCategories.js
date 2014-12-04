@@ -22,19 +22,61 @@
                     if (result.status === 200) {
                         var jsonDocument = result.responseText;
                         var arrayCategorie = JSON.parse(jsonDocument);
-                        var numberLines = -1;
+                        var idValues = [];
                         arrayCategorie.forEach(
                             function displayCategories(element, index, array) {
                                 var table = document.getElementById("tbodyCategorie");
-                                var line = table.insertRow(numberLines);
+                                var line = table.insertRow(-1);
                                 var columnID = line.insertCell(0);
                                 columnID.innerHTML += element.ID;
+                                idValues.push(element.ID);
                                 var columnNameFr = line.insertCell(1);
                                 columnNameFr.innerHTML += element.name_fr;
                                 var columnNameEn = line.insertCell(2);
                                 columnNameEn.innerHTML += element.name_en;
                                 var columnUpdate = line.insertCell(3);
                                 var columnDelete = line.insertCell(4);
+                                columnDelete.innerHTML += "<input id=\"delete" + element.ID + "\" type=\"button\" value=\"Supprimer\"";
+                            }
+                        );
+                    }
+                    WinJS.UI.processAll().done(function () {
+                        idValues.forEach(
+                            function getID(element, index, array) {
+                                var anchor = document.getElementById("delete" + element);
+                                anchor.addEventListener("click", function () {
+                                    clickEventHandlerToDelete(element);
+                                })
+                            }
+                        );
+                    });
+
+                    function clickEventHandlerToDelete(id) {
+                        var objData = {};
+                        objData.a = hashedKey;
+                        var options = {
+                            url: beginAddress + "/admin/categories/" + id,
+                            type: "DELETE",
+                            data: JSON.stringify(objData),
+                            headers: { "Content-Type": "application/json;charset=utf-8" },
+                            responseType: 'json'
+                        }
+                        WinJS.xhr(options).done(
+                            function success(req) {
+                                Windows.UI.Popups.MessageDialog("Catégorie supprimée").showAsync();
+                                WinJS.Navigation.navigate(adminHome, { key: hashedKey });
+                            }
+                            ,
+                            function error(err) {
+                                var statusCode = err.status;
+                                if (400 === statusCode) {
+                                    Windows.UI.Popups.MessageDialog("La catégorie n'existe pas").showAsync();
+                                    WinJS.Navigation.navigate(adminHome, { key: hashedKey });
+                                }
+                                else {
+                                    Windows.UI.Popups.MessageDialog("Une erreur s'est produite.").showAsync();
+                                    WinJS.Navigation.navigate(adminHome, { key: hashedKey });
+                                }
                             }
                         );
                     }
@@ -42,6 +84,10 @@
                 function error(err) {
                     if (400 === err.status) {
                         Windows.UI.Popups.MessageDialog("Pas de categories").showAsync();
+                        WinJS.Navigation.navigate(adminHome, { key: hashedKey });
+                    }
+                    else {
+                        Windows.UI.Popups.MessageDialog("Une erreur s'est produite.").showAsync();
                         WinJS.Navigation.navigate(adminHome, { key: hashedKey });
                     }
                 }
