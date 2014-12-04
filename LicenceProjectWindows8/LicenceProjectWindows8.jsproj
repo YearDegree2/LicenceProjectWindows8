@@ -74,6 +74,9 @@
     <Content Include="pages\categorie\addCategorie\addCategorie.css" />
     <Content Include="pages\categorie\addCategorie\addCategorie.html" />
     <Content Include="pages\categorie\addCategorie\addCategorie.js" />
+    <Content Include="pages\categorie\getCategories\getCategories.css" />
+    <Content Include="pages\categorie\getCategories\getCategories.html" />
+    <Content Include="pages\categorie\getCategories\getCategories.js" />
     <Content Include="pages\connexion\connexion.css" />
     <Content Include="pages\connexion\connexion.html" />
     <Content Include="pages\connexion\connexion.js" />

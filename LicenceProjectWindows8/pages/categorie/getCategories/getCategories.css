@@ -1,0 +1,19 @@
+﻿.getCategories section[role=main] {
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+#tableCategorie {
+    margin: 50px auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th, td {
+    border: 3px solid white;
+    padding: 10px;
+}
+
+th {
+    width: 200px;
+}

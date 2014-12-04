@@ -35,7 +35,7 @@
     });
     var dataArray = [
   { title: "Ajouter une catégorie", text: "Ajouter une catégorie", picture: "/images/60banana.png", link: addCategorie },
-  { title: "Banana blast", text: "Ice cream", picture: "/images/60banana.png", link: "/pages/page2/page2.html" },
+  { title: "Lister les catégories", text: "Lister les catégories", picture: "/images/60banana.png", link: getCategories },
   { title: "Brilliant citron", text: "Frozen custard", picture: "/images/60Lemon.png", link: "/pages/page3/page3.html" },
   { title: "Orange surprise", text: "Sherbet", picture: "/images/60orange.png", link: "/pages/page1/page1.html" },
   { title: "Original orange", text: "Sherbet", picture: "/images/60orange.png", link: "/pages/page1/page1.html" },

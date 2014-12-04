@@ -50,8 +50,6 @@
         }
     });
     function clickEventHandlerToAddCategorie(hashedKey) {
-        // Cette fonction est appelée lors d'un click sur
-        // le bouton Envoyer ou sur le bouton Enter.
         var objData = {};
         objData.a = hashedKey;
         if (document.getElementById("id").value != "") {
@@ -74,7 +72,7 @@
             function success(req) {
                 var statusCode = req.status;
                 if (statusCode == 200) {
-                    Windows.UI.Popups.MessageDialog("Categorie ajoutée").showAsync();
+                    Windows.UI.Popups.MessageDialog("Catégorie ajoutée").showAsync();
                     WinJS.Navigation.navigate(adminHome, { key: hashedKey });
                 }
             }
@@ -84,11 +82,13 @@
                 if (statusCode == 403) {
                     Windows.UI.Popups.MessageDialog("Admin non connecté").showAsync();
                 }
-                else if (statusCode == 404) {
-                    Windows.UI.Popups.MessageDialog("Attributs name_fr ou name_en manquant").showAsync();
-                }
                 else {
-                    Windows.UI.Popups.MessageDialog("Une erreur s'est produite.").showAsync();
+                    if (statusCode == 404) {
+                        Windows.UI.Popups.MessageDialog("Attributs name_fr ou name_en manquant").showAsync();
+                    }
+                    else {
+                        Windows.UI.Popups.MessageDialog("Une erreur s'est produite.").showAsync();
+                    }
                 }
             }
         );
