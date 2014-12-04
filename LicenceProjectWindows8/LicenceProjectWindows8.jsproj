@@ -71,6 +71,9 @@
     <Content Include="pages\adminHome\adminHome.css" />
     <Content Include="pages\adminHome\adminHome.html" />
     <Content Include="pages\adminHome\adminHome.js" />
+    <Content Include="pages\categorie\addCategorie\addCategorie.css" />
+    <Content Include="pages\categorie\addCategorie\addCategorie.html" />
+    <Content Include="pages\categorie\addCategorie\addCategorie.js" />
     <Content Include="pages\connexion\connexion.css" />
     <Content Include="pages\connexion\connexion.html" />
     <Content Include="pages\connexion\connexion.js" />
