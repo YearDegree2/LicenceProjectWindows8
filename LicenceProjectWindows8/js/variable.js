@@ -10,4 +10,4 @@ var getCategories = "/pages/categorie/getCategories/getCategories.html";
 var updateCategorie = "/pages/categorie/updateCategorie/updateCategorie.html";
 var addRubrique = "/pages/rubrique/addRubrique/addRubrique.html";
 var getRubriques = "/pages/rubrique/getRubriques/getRubriques.html";
-var updaterubrique = "/pages/rubrique/updateRubrique/updateRubrique.html";
+var updateRubrique = "/pages/rubrique/updateRubrique/updateRubrique.html";
