@@ -127,7 +127,7 @@
                     return;
                 }
                 if (404 === err.status) {
-                    Windows.UI.Popups.MessageDialog("Attributs manquants").showAsync();
+                    Windows.UI.Popups.MessageDialog("Attributs titre_fr or titre_en manquants").showAsync();
                     return;
                 }
                 Windows.UI.Popups.MessageDialog("Une erreur s'est produite.").showAsync();

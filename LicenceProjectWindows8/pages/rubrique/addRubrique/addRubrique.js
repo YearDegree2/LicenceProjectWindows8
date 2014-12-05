@@ -31,6 +31,30 @@
                         clickEventHandlerToAddRubrique(hashedKey);
                     }
                 });
+                document.getElementById("content_fr").addEventListener("keypress", function (e) {
+                    var key = e.which || e.keyCode;
+                    if (key == 13) {
+                        clickEventHandlerToAddRubrique(hashedKey);
+                    }
+                });
+                document.getElementById("content_en").addEventListener("keypress", function (e) {
+                    var key = e.which || e.keyCode;
+                    if (key == 13) {
+                        clickEventHandlerToAddRubrique(hashedKey);
+                    }
+                });
+                document.getElementById("actif").addEventListener("keypress", function (e) {
+                    var key = e.which || e.keyCode;
+                    if (key == 13) {
+                        clickEventHandlerToAddRubrique(hashedKey);
+                    }
+                });
+                document.getElementById("position").addEventListener("keypress", function (e) {
+                    var key = e.which || e.keyCode;
+                    if (key == 13) {
+                        clickEventHandlerToAddRubrique(hashedKey);
+                    }
+                });
             });
         }
     });
@@ -71,7 +95,7 @@
                     return;
                 }
                 if (404 === err.status) {
-                    Windows.UI.Popups.MessageDialog("Attributs manquant").showAsync();
+                    Windows.UI.Popups.MessageDialog("Attributs titre_fr or titre_en manquant").showAsync();
                     return;
                 }
                 Windows.UI.Popups.MessageDialog("Cet ID est déjà présent dans la base de données").showAsync();
