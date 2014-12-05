@@ -1,45 +1,43 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
-    <title>addCategorie</title>
+    <title>updateCategorie</title>
 
     <!-- Références WinJS -->
     <link href="//Microsoft.WinJS.2.0/css/ui-dark.css" rel="stylesheet" />
     <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
     <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
 
-    <link href="addCategorie.css" rel="stylesheet" />
+    <link href="updateCategorie.css" rel="stylesheet" />
     <script src="/js/variable.js"></script>
-    <script src="addCategorie.js"></script>
+    <script src="updateCategorie.js"></script>
 </head>
 <body>
-    <div class="addCategorie fragment">
+    <div class="updateCategorie fragment">
         <header class="page-header" aria-label="Header content" role="banner">
             <button class="back-button" data-win-control="WinJS.UI.BackButton"></button>
             <h1 class="titlearea win-type-ellipsis">
-                <span class="pagetitle">Ajouter une catégorie</span>
+                <span class="pagetitle">Modifier une catégorie</span>
             </h1>
         </header>
         <section aria-label="Main content" role="main">
             <table id="tableCategorie">
                 <thead>
                     <tr>
-                        <th>ID</th>
                         <th>name_fr</th>
                         <th>name_en</th>
                     </tr>
                 </thead>
                 <tbody id="tbodyCategorie">
                     <tr>
-                        <td><input type="text" name="id" id="id" value="" /></td>
                         <td><input type="text" name="name_fr" id="name_fr" value="" /></td>
                         <td><input type="text" name="name_en" id="name_en" value="" /></td>
                     </tr>
                 </tbody>
             </table>
-            <input id="sendCategorie" type="button" value="Ajouter" />
+            <input id="sendCategorie" type="button" value="Modifier" />
         </section>
     </div>
 </body>

@@ -34,6 +34,7 @@
                                 var columnNameEn = line.insertCell(2);
                                 columnNameEn.innerHTML += element.name_en;
                                 var columnUpdate = line.insertCell(3);
+                                columnUpdate.innerHTML += "<input id=\"modify" + element.ID + "\" type=\"button\" value=\"Modifier\"";
                                 var columnDelete = line.insertCell(4);
                                 columnDelete.innerHTML += "<input id=\"delete" + element.ID + "\" type=\"button\" value=\"Supprimer\"";
                             }
@@ -42,6 +43,10 @@
                     WinJS.UI.processAll().done(function () {
                         idValues.forEach(
                             function getID(element, index, array) {
+                                var anchorModify = document.getElementById("modify" + element);
+                                anchorModify.addEventListener("click", function () {
+                                    clickEventHandlerToModify(element, hashedKey);
+                                })
                                 var anchor = document.getElementById("delete" + element);
                                 anchor.addEventListener("click", function () {
                                     clickEventHandlerToDelete(element, hashedKey);
@@ -63,6 +68,10 @@
             );
         }
     });
+
+    function clickEventHandlerToModify(id, hashedKey) {
+        WinJS.Navigation.navigate(updateCategorie, { key: hashedKey, idCategorie: id });
+    }
 
     function clickEventHandlerToDelete(id, hashedKey) {
         var objData = {};

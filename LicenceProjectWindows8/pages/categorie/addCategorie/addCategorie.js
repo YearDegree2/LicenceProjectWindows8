@@ -9,8 +9,8 @@
             }
 
             WinJS.UI.processAll().done(function () {
-                var bt_sendAddCategorie = document.getElementById("sendAddCategorie");
-                bt_sendAddCategorie.addEventListener("click", function () {
+                var sendCategorie = document.getElementById("sendCategorie");
+                sendCategorie.addEventListener("click", function () {
                     clickEventHandlerToAddCategorie(hashedKey);
                 });
                 document.getElementById("id").addEventListener("keypress", function (e) {
