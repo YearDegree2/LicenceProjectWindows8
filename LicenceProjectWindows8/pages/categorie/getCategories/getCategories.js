@@ -1,6 +1,4 @@
-﻿// Pour obtenir une présentation du modèle Contrôle de page, consultez la documentation suivante :
-// http://go.microsoft.com/fwlink/?LinkId=232511
-(function () {
+﻿(function () {
     "use strict";
 
     WinJS.UI.Pages.define(getCategories, {
@@ -9,6 +7,7 @@
             if (WinJS.Navigation.state.key) {
                 hashedKey = WinJS.Navigation.state.key;
             }
+
             var objData = {};
             var options = {
                 url: beginAddress + "/categories",
@@ -19,7 +18,7 @@
             }
             WinJS.xhr(options).done(
                 function success(result) {
-                    if (result.status === 200) {
+                    if (200 === result.status) {
                         var jsonDocument = result.responseText;
                         var arrayCategorie = JSON.parse(jsonDocument);
                         var idValues = [];
@@ -45,63 +44,53 @@
                             function getID(element, index, array) {
                                 var anchor = document.getElementById("delete" + element);
                                 anchor.addEventListener("click", function () {
-                                    clickEventHandlerToDelete(element);
+                                    clickEventHandlerToDelete(element, hashedKey);
                                 })
                             }
                         );
                     });
-
-                    function clickEventHandlerToDelete(id) {
-                        var objData = {};
-                        objData.a = hashedKey;
-                        var options = {
-                            url: beginAddress + "/admin/categories/" + id,
-                            type: "DELETE",
-                            data: JSON.stringify(objData),
-                            headers: { "Content-Type": "application/json;charset=utf-8" },
-                            responseType: 'json'
-                        }
-                        WinJS.xhr(options).done(
-                            function success(req) {
-                                Windows.UI.Popups.MessageDialog("Catégorie supprimée").showAsync();
-                                WinJS.Navigation.navigate(adminHome, { key: hashedKey });
-                            }
-                            ,
-                            function error(err) {
-                                var statusCode = err.status;
-                                if (400 === statusCode) {
-                                    Windows.UI.Popups.MessageDialog("La catégorie n'existe pas").showAsync();
-                                    WinJS.Navigation.navigate(adminHome, { key: hashedKey });
-                                }
-                                else {
-                                    Windows.UI.Popups.MessageDialog("Une erreur s'est produite.").showAsync();
-                                    WinJS.Navigation.navigate(adminHome, { key: hashedKey });
-                                }
-                            }
-                        );
-                    }
                 },
+
                 function error(err) {
                     if (400 === err.status) {
-                        Windows.UI.Popups.MessageDialog("Pas de categories").showAsync();
+                        Windows.UI.Popups.MessageDialog("Pas de catégories").showAsync();
                         WinJS.Navigation.navigate(adminHome, { key: hashedKey });
+                        return;
                     }
-                    else {
-                        Windows.UI.Popups.MessageDialog("Une erreur s'est produite.").showAsync();
-                        WinJS.Navigation.navigate(adminHome, { key: hashedKey });
-                    }
+                    Windows.UI.Popups.MessageDialog("Une erreur s'est produite.").showAsync();
+                    WinJS.Navigation.navigate(adminHome, { key: hashedKey });
                 }
             );
-        },
-
-        unload: function () {
-            // TODO: répondre aux navigations en dehors de cette page.
-        },
-
-        updateLayout: function (element) {
-            /// <param name="element" domElement="true" />
-
-            // TODO: répondez aux modifications de la disposition.
         }
     });
+
+    function clickEventHandlerToDelete(id, hashedKey) {
+        var objData = {};
+        objData.a = hashedKey;
+        var options = {
+            url: beginAddress + "/admin/categories/" + id,
+            type: "DELETE",
+            data: JSON.stringify(objData),
+            headers: { "Content-Type": "application/json;charset=utf-8" },
+            responseType: 'json'
+        }
+        WinJS.xhr(options).done(
+            function success(result) {
+                if (200 === result.status) {
+                    Windows.UI.Popups.MessageDialog("Catégorie supprimée").showAsync();
+                    WinJS.Navigation.navigate(adminHome, { key: hashedKey });
+                }
+            },
+
+            function error(err) {
+                if (400 === statusCode) {
+                    Windows.UI.Popups.MessageDialog("La catégorie n'existe pas").showAsync();
+                    WinJS.Navigation.navigate(adminHome, { key: hashedKey });
+                    return;
+                }
+                Windows.UI.Popups.MessageDialog("Une erreur s'est produite.").showAsync();
+                WinJS.Navigation.navigate(adminHome, { key: hashedKey });
+            }
+        );
+    }
 })();

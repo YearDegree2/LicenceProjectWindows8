@@ -4,7 +4,6 @@
 }
 
 .fragment {
-    /* Définissez une grille avec des lignes pour une bannière et un corps */
     -ms-grid-columns: 1fr;
     -ms-grid-rows: 128px 1fr;
     display: -ms-grid;
@@ -13,7 +12,6 @@
 }
 
 .fragment header[role=banner] {
-    /* Définissez une grille avec des colonnes pour le bouton Précédent et le titre de page. */
     -ms-grid-columns: 37px 83px 1fr;
     -ms-grid-rows: 1fr;
     display: -ms-grid;
@@ -43,4 +41,8 @@
 
 .titlearea {    
     text-align: center;
+}
+
+button, input[type="button"] {
+    cursor: pointer;
 }

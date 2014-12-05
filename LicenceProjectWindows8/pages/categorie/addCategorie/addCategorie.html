@@ -22,21 +22,21 @@
                 <span class="pagetitle">Ajouter une catégorie</span>
             </h1>
         </header>
-        <section id="addCategorieSection" class="page-section" aria-label="Main content" role="main">
-            <table id="tableAddCategorie">
+        <section aria-label="Main content" role="main">
+            <table id="tableCategorie">
                 <thead>
                     <tr>
                         <th>ID</th>
                         <th>name_fr</th>
                         <th>name_en</th>
                     </tr>
+                </thead>
+                <tbody id="tbodyCategorie">
                     <tr>
                         <td><input type="text" name="id" id="id" value="" /></td>
                         <td><input type="text" name="name_fr" id="name_fr" value="" /></td>
                         <td><input type="text" name="name_en" id="name_en" value="" /></td>
                     </tr>
-                </thead>
-                <tbody id="tbodyAddCategorie">
                 </tbody>
             </table>
             <input id="sendAddCategorie" type="button" value="Ajouter" />
