@@ -14,11 +14,12 @@ th, td {
 }
 
 th {
-    width: 200px;
+    min-width: 200px;
 }
 
 #sendCategorie {
     margin-top: 5%;
     margin-left:47%;
     padding: 5px;
+    position: absolute;
 }
