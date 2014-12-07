@@ -87,15 +87,9 @@
     <Content Include="pages\home\home.html" />
     <Content Include="pages\home\home.js" />
     <Content Include="default.html" />
-    <Content Include="pages\page1\page1.css" />
-    <Content Include="pages\page1\page1.html" />
-    <Content Include="pages\page1\page1.js" />
-    <Content Include="pages\page2\page2.css" />
-    <Content Include="pages\page2\page2.html" />
-    <Content Include="pages\page2\page2.js" />
-    <Content Include="pages\page3\page3.css" />
-    <Content Include="pages\page3\page3.html" />
-    <Content Include="pages\page3\page3.js" />
+    <Content Include="pages\publication\addPublication\addPublication.css" />
+    <Content Include="pages\publication\addPublication\addPublication.html" />
+    <Content Include="pages\publication\addPublication\addPublication.js" />
     <None Include="LicenceProjectWindows8_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
