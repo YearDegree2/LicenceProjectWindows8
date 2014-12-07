@@ -1,6 +1,5 @@
 ﻿.updateCategorie section[role=main] {
-    margin-left: 120px;
-    margin-right: 120px;
+    overflow-x: auto;
 }
 
 #tableCategorie {

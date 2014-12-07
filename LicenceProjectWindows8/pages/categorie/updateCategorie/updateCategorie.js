@@ -32,13 +32,13 @@
                     sendCategorie.addEventListener("click", function () {
                         clickEventHandlerToUpdateCategorie(idCategorie, hashedKey);
                     });
-                    document.getElementById("name_fr").addEventListener("keypress", function (e) {
+                    nameFr.addEventListener("keypress", function (e) {
                         var key = e.which || e.keyCode;
                         if (key == 13) {
                             clickEventHandlerToUpdateCategorie(idCategorie, hashedKey);
                         }
                     });
-                    document.getElementById("name_en").addEventListener("keypress", function (e) {
+                    nameEn.addEventListener("keypress", function (e) {
                         var key = e.which || e.keyCode;
                         if (key == 13) {
                             clickEventHandlerToUpdateCategorie(idCategorie, hashedKey);
