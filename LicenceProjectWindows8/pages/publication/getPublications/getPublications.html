@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>getPublications</title>
+
+    <!-- Références WinJS -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link href="getPublications.css" rel="stylesheet" />
+    <script src="/js/variable.js"></script>
+    <script src="getPublications.js"></script>
+</head>
+<body>
+    <div class="getPublications fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Liste des publications</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <table id="tablePublication">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>reference</th>
+                        <th>auteurs</th>
+                        <th>titre</th>
+                        <th>date (YYYY-MM-DD)</th>
+                        <th>journal</th>
+                        <th>volume</th>
+                        <th>number</th>
+                        <th>pages</th>
+                        <th>note</th>
+                        <th>abstract</th>
+                        <th>keywords</th>
+                        <th>series</th>
+                        <th>localite</th>
+                        <th>publisher</th>
+                        <th>editor</th>
+                        <th>date_display</th>
+                        <th>categorie_id</th>
+                        <th>Modifier</th>
+                        <th>Supprimer</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyPublication"></tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
