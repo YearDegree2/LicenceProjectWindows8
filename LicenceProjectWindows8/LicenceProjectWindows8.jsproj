@@ -93,6 +93,9 @@
     <Content Include="pages\publication\getPublications\getPublications.css" />
     <Content Include="pages\publication\getPublications\getPublications.html" />
     <Content Include="pages\publication\getPublications\getPublications.js" />
+    <Content Include="pages\publication\updatePublication\updatePublication.css" />
+    <Content Include="pages\publication\updatePublication\updatePublication.html" />
+    <Content Include="pages\publication\updatePublication\updatePublication.js" />
     <None Include="LicenceProjectWindows8_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

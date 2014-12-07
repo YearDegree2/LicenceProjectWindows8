@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>updatePublication</title>
+
+    <!-- Références WinJS -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link href="updatePublication.css" rel="stylesheet" />
+    <script src="/js/variable.js"></script>
+    <script src="updatePublication.js"></script>
+</head>
+<body>
+    <div class="updatePublication fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Modifier une publication</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <table id="tablePublication">
+                <thead>
+                    <tr>
+                        <th>reference</th>
+                        <th>auteurs</th>
+                        <th>titre</th>
+                        <th>date (YYYY-MM-DD)</th>
+                        <th>journal</th>
+                        <th>volume</th>
+                        <th>number</th>
+                        <th>pages</th>
+                        <th>note</th>
+                        <th>abstract</th>
+                        <th>keywords</th>
+                        <th>series</th>
+                        <th>localite</th>
+                        <th>publisher</th>
+                        <th>editor</th>
+                        <th>date_display</th>
+                        <th>categorie_id</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyPublication">
+                    <tr>
+                        <td><input type="text" name="reference" id="reference" value="" /></td>
+                        <td><input type="text" name="auteurs" id="auteurs" value="" /></td>
+                        <td><input type="text" name="titre" id="titre" value="" /></td>
+                        <td><input type="text" name="date" id="date" value="" /></td>
+                        <td><input type="text" name="journal" id="journal" value="" /></td>
+                        <td><input type="text" name="volume" id="volume" value="" /></td>
+                        <td><input type="text" name="number" id="number" value="" /></td>
+                        <td><input type="text" name="pages" id="pages" value="" /></td>
+                        <td><input type="text" name="note" id="note" value="" /></td>
+                        <td><input type="text" name="abstract" id="abstract" value="" /></td>
+                        <td><input type="text" name="keywords" id="keywords" value="" /></td>
+                        <td><input type="text" name="series" id="series" value="" /></td>
+                        <td><input type="text" name="localite" id="localite" value="" /></td>
+                        <td><input type="text" name="publisher" id="publisher" value="" /></td>
+                        <td><input type="text" name="editor" id="editor" value="" /></td>
+                        <td><input type="text" name="date_display" id="date_display" value="" /></td>
+                        <td><input type="text" name="categorie_id" id="categorie_id" value="" /></td>
+                    </tr>
+                </tbody>
+            </table>
+            <input id="sendPublication" type="button" value="Modifier" />
+        </section>
+    </div>
+</body>
+</html>
