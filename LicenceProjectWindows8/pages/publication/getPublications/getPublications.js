@@ -65,9 +65,20 @@
                                 columnCategorieId.innerHTML += element.categorie_id;
                                 var columnUpdate = line.insertCell(18);
                                 var columnDelete = line.insertCell(19);
+                                columnDelete.innerHTML += "<input id=\"delete" + element.ID + "\" type=\"button\" value=\"Supprimer\"";
                             }
                         );
                     }
+                    WinJS.UI.processAll().done(function () {
+                        idValues.forEach(
+                            function getID(element, index, array) {
+                                var anchor = document.getElementById("delete" + element);
+                                anchor.addEventListener("click", function () {
+                                    clickEventHandlerToDelete(element, hashedKey);
+                                })
+                            }
+                        );
+                    });
                 },
 
                 function error(err) {
@@ -82,4 +93,34 @@
             );
         }
     });
+
+    function clickEventHandlerToDelete(id, hashedKey) {
+        var objData = {};
+        objData.a = hashedKey;
+        var options = {
+            url: beginAddress + "/admin/publications/" + id,
+            type: "DELETE",
+            data: JSON.stringify(objData),
+            headers: { "Content-Type": "application/json;charset=utf-8" },
+            responseType: 'json'
+        }
+        WinJS.xhr(options).done(
+            function success(result) {
+                if (200 === result.status) {
+                    Windows.UI.Popups.MessageDialog("Publication supprimée").showAsync();
+                    WinJS.Navigation.navigate(adminHome, { key: hashedKey });
+                }
+            },
+
+            function error(err) {
+                if (400 === statusCode) {
+                    Windows.UI.Popups.MessageDialog("La publication n'existe pas").showAsync();
+                    WinJS.Navigation.navigate(adminHome, { key: hashedKey });
+                    return;
+                }
+                Windows.UI.Popups.MessageDialog("Une erreur s'est produite.").showAsync();
+                WinJS.Navigation.navigate(adminHome, { key: hashedKey });
+            }
+        );
+    }
 })();
