@@ -24,14 +24,14 @@
                 function success(result) {
                     var jsonDocument = result.responseText;
                     var rubrique = JSON.parse(jsonDocument);
-                    var titre_fr = document.getElementById("titre_fr");
-                    titre_fr.value += rubrique.titre_fr;
-                    var titre_en = document.getElementById("titre_en");
-                    titre_en.value += rubrique.titre_en;
-                    var content_fr = document.getElementById("content_fr");
-                    content_fr.value += rubrique.content_fr;
-                    var content_en = document.getElementById("content_en");
-                    content_en.value += rubrique.content_en;
+                    var titreFR = document.getElementById("titre_fr");
+                    titreFR.value += rubrique.titre_fr;
+                    var titreEN = document.getElementById("titre_en");
+                    titreEN.value += rubrique.titre_en;
+                    var contentFR = document.getElementById("content_fr");
+                    contentFR.value += rubrique.content_fr;
+                    var contentEN = document.getElementById("content_en");
+                    contentEN.value += rubrique.content_en;
                     var actif = document.getElementById("actif");
                     actif.value += rubrique.actif;
                     var position = document.getElementById("position");
@@ -40,37 +40,37 @@
                     sendRubrique.addEventListener("click", function () {
                         clickEventHandlerToUpdateRubrique(idRubrique, hashedKey);
                     });
-                    document.getElementById("titre_fr").addEventListener("keypress", function (e) {
+                    titreFR.addEventListener("keypress", function (e) {
                         var key = e.which || e.keyCode;
                         if (key == 13) {
                             clickEventHandlerToUpdateRubrique(idRubrique, hashedKey);
                         }
                     });
-                    document.getElementById("titre_en").addEventListener("keypress", function (e) {
+                    titreEN.addEventListener("keypress", function (e) {
                         var key = e.which || e.keyCode;
                         if (key == 13) {
                             clickEventHandlerToUpdateRubrique(idRubrique, hashedKey);
                         }
                     });
-                    document.getElementById("content_fr").addEventListener("keypress", function (e) {
+                    contentFR.addEventListener("keypress", function (e) {
                         var key = e.which || e.keyCode;
                         if (key == 13) {
                             clickEventHandlerToUpdateRubrique(idRubrique, hashedKey);
                         }
                     });
-                    document.getElementById("content_en").addEventListener("keypress", function (e) {
+                    contentEN.addEventListener("keypress", function (e) {
                         var key = e.which || e.keyCode;
                         if (key == 13) {
                             clickEventHandlerToUpdateRubrique(idRubrique, hashedKey);
                         }
                     });
-                    document.getElementById("actif").addEventListener("keypress", function (e) {
+                    actif.addEventListener("keypress", function (e) {
                         var key = e.which || e.keyCode;
                         if (key == 13) {
                             clickEventHandlerToUpdateRubrique(idRubrique, hashedKey);
                         }
                     });
-                    document.getElementById("position").addEventListener("keypress", function (e) {
+                    position.addEventListener("keypress", function (e) {
                         var key = e.which || e.keyCode;
                         if (key == 13) {
                             clickEventHandlerToUpdateRubrique(idRubrique, hashedKey);

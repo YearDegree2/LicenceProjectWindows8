@@ -1,6 +1,5 @@
-﻿.addrubrique section[role=main] {
-    margin-left: 120px;
-    margin-right: 120px;
+﻿.addRubrique section[role=main] {
+    overflow-x: auto;
 }
 
 #tableRubrique {

@@ -1,4 +1,8 @@
-﻿#tableRubrique {
+﻿ .getRubriques section[role=main] {
+    overflow-x: auto;
+}
+
+#tableRubrique {
     margin: 50px auto;
     border-collapse: collapse;
     text-align: center;

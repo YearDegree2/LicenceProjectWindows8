@@ -82,7 +82,7 @@
     });
 
     function clickEventHandlerToModify(id, hashedKey) {
-        WinJS.Navigation.navigate(updateRubrique, { key: hashedKey, idCategorie: id });
+        WinJS.Navigation.navigate(updateRubrique, { key: hashedKey, idRubrique: id });
     }
 
     function clickEventHandlerToDelete(id, hashedKey) {
