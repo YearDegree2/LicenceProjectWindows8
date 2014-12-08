@@ -103,8 +103,12 @@
         }
         objData.actif = document.getElementById("actif").value;
         objData.position = document.getElementById("position").value;
-        objData.content_fr = document.getElementById("content_fr").value;
-        objData.content_en = document.getElementById("content_en").value;
+        if (document.getElementById("content_fr").value != null) {
+            objData.content_fr = document.getElementById("content_fr").value;
+        }
+        if (document.getElementById("content_en").value != null) {
+            objData.content_en = document.getElementById("content_en").value;
+        }
         var options = {
             url: beginAddress + "/admin/rubriques/" + idRubrique,
             type: "PUT",
