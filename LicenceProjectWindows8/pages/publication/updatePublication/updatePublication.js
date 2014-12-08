@@ -157,8 +157,8 @@
                     Windows.UI.Popups.MessageDialog("Attribut reference manquant").showAsync();
                     return;
                 }
-                Windows.UI.Popups.MessageDialog("Une erreur s'est produite.").showAsync();
-                WinJS.Navigation.navigate(adminHome, { key: hashedKey });
+                Windows.UI.Popups.MessageDialog("Cet ID est déjà présent dans la base de données ou le categorie_id n'est associé à aucune catégorie").showAsync();
+                WinJS.Navigation.back();
             }
         );
     }
