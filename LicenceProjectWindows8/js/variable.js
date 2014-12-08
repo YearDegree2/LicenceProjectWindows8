@@ -12,3 +12,7 @@ var updateCategorie = "/pages/categorie/updateCategorie/updateCategorie.html";
 var addPublication = "/pages/publication/addPublication/addPublication.html";
 var getPublications = "/pages/publication/getPublications/getPublications.html";
 var updatePublication = "/pages/publication/updatePublication/updatePublication.html";
+
+var addRubrique = "/pages/rubrique/addRubrique/addRubrique.html";
+var getRubriques = "/pages/rubrique/getRubriques/getRubriques.html";
+var updateRubrique = "/pages/rubrique/updateRubrique/updateRubrique.html";

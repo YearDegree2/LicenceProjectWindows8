@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>updateRubrique</title>
+
+    <!-- Références WinJS -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link href="updateRubrique.css" rel="stylesheet" />
+    <script src="/js/variable.js"></script>
+    <script src="updateRubrique.js"></script>
+</head>
+<body>
+    <div class="updateRubrique fragment">
+        <header class="page-header" aria-label="Header content" role="banner">
+            <button class="back-button" data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Modifier une rubrique</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <table id="tableRubrique">
+                <thead>
+                    <tr>
+                        <th>titre_fr</th>
+                        <th>titre_en</th>
+                        <th>content_fr</th>
+                        <th>content_en</th>
+                        <th>actif</th>
+                        <th>position</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyRubrique">
+                    <tr>
+                        <td><input type="text" name="titre_fr" id="titre_fr" value="" /></td>
+                        <td><input type="text" name="titre_en" id="titre_en" value="" /></td>
+                        <td><input type="text" name="content_fr" id="content_fr" value="" /></td>
+                        <td><input type="text" name="content_en" id="content_en" value="" /></td>
+                        <td><input type="text" name="actif" id="actif" value="" /></td>
+                        <td><input type="text" name="position" id="position" value="" /></td>
+                    </tr>
+                </tbody>
+            </table>
+            <input id="sendRubrique" type="button" value="Modifier" />
+        </section>
+    </div>
+</body>
+</html>

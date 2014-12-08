@@ -87,7 +87,7 @@
     <Content Include="pages\home\home.html" />
     <Content Include="pages\home\home.js" />
     <Content Include="default.html" />
-    <Content Include="pages\publication\addPublication\addPublication.css" />
+	<Content Include="pages\publication\addPublication\addPublication.css" />
     <Content Include="pages\publication\addPublication\addPublication.html" />
     <Content Include="pages\publication\addPublication\addPublication.js" />
     <Content Include="pages\publication\getPublications\getPublications.css" />
@@ -96,6 +96,15 @@
     <Content Include="pages\publication\updatePublication\updatePublication.css" />
     <Content Include="pages\publication\updatePublication\updatePublication.html" />
     <Content Include="pages\publication\updatePublication\updatePublication.js" />
+    <Content Include="pages\rubrique\addRubrique\addRubrique.css" />
+    <Content Include="pages\rubrique\addRubrique\addRubrique.html" />
+    <Content Include="pages\rubrique\addRubrique\addRubrique.js" />
+    <Content Include="pages\rubrique\getRubriques\getRubriques.css" />
+    <Content Include="pages\rubrique\getRubriques\getRubriques.html" />
+    <Content Include="pages\rubrique\getRubriques\getRubriques.js" />
+    <Content Include="pages\rubrique\updateRubrique\updateRubrique.css" />
+    <Content Include="pages\rubrique\updateRubrique\updateRubrique.html" />
+    <Content Include="pages\rubrique\updateRubrique\updateRubrique.js" />
     <None Include="LicenceProjectWindows8_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
