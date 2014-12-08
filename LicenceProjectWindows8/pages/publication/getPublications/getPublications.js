@@ -122,7 +122,7 @@
             },
 
             function error(err) {
-                if (400 === statusCode) {
+                if (400 === err.status) {
                     Windows.UI.Popups.MessageDialog("La publication n'existe pas").showAsync();
                     WinJS.Navigation.navigate(adminHome, { key: hashedKey });
                     return;
