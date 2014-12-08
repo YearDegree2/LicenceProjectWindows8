@@ -1,8 +1,8 @@
-﻿.getCategories section[role=main] {
+﻿.getPublications section[role=main] {
     overflow: auto;
 }
 
-#tableCategorie {
+#tablePublication {
     margin: 50px auto;
     border-collapse: collapse;
     text-align: center;
