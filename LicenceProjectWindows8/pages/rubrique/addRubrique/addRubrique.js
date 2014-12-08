@@ -89,6 +89,7 @@
                     WinJS.Navigation.navigate(adminHome, { key: hashedKey });
                 }
             },
+
             function error(err) {
                 if (403 === err.status) {
                     Windows.UI.Popups.MessageDialog("Admin non connecté").showAsync();

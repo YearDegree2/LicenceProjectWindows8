@@ -1,5 +1,5 @@
 ﻿ .getRubriques section[role=main] {
-    overflow-x: auto;
+    overflow: auto;
 }
 
 #tableRubrique {
@@ -14,5 +14,5 @@ th, td {
 }
 
 th {
-    width: 200px;
+    min-width: 200px;
 }
