@@ -6,8 +6,13 @@
 .win-listview {
     height: 90%; 
     width: 90%;
+    left: 16%;
 }
 
 .elemListView {
     cursor: pointer;
+}
+
+.win-item {
+    margin: 0 25px 0 25px;
 }
