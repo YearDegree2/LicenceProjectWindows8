@@ -43,7 +43,7 @@
     text-align: center;
 }
 
-button, input[type="button"] {
+button, input[type="button"], a {
     cursor: pointer;
 }
 
