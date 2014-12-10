@@ -24,7 +24,35 @@
                         var idValues = [];
                         arrayPublication.forEach(
                             function displayPublications(element, index, array) {
-                                
+                                var publications = document.getElementById("publications");
+                                var publication = document.createElement("div");
+                                publication.className = "publication";
+                                var publicationValue = [];
+                                publicationValue.push("[", element.reference, "] ", element.auteurs, ", <i>", element.titre, "</i>");
+                                if ("" !== element.journal && null !== element.journal) {
+                                    publicationValue.push(", <strong>In ", element.journal, "</strong>");
+                                }
+                                if ("" !== element.editor && null !== element.editor) {
+                                    publicationValue.push(", ", element.editor);
+                                }
+                                if ("" !== element.pages && null !== element.pages) {
+                                    publicationValue.push(", ", element.pages);
+                                }
+                                if ("" !== element.publisher && null !== element.publisher) {
+                                    publicationValue.push(", ", element.publisher);
+                                }
+                                if ("" !== element.date && null !== element.date) {
+                                    publicationValue.push(", ", element.date);
+                                }
+                                publicationValue.push("<br/>");
+                                if ("" !== element.note && null !== element.note) {
+                                    publicationValue.push(element.note, "<br/>");
+                                }
+                                if ("" !== element.keywords && null !== element.keywords) {
+                                    publicationValue.push("<h6>Mots clés : ", element.keywords, "</h6>");
+                                }
+                                publication.innerHTML = publicationValue.join("");
+                                publications.appendChild(publication);
                             }
                         );
                     }
