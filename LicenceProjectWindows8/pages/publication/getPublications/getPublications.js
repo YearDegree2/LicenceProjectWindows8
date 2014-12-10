@@ -154,7 +154,15 @@
                     publicationBibTeX.push("    date_display = {", publication.date_display, "},\n");
                 }
                 publicationBibTeX.push("}");
-                Windows.UI.Popups.MessageDialog(publicationBibTeX.join("")).showAsync();
+                var msg = new Windows.UI.Popups.MessageDialog(publicationBibTeX.join(""));
+                msg.commands.append(new Windows.UI.Popups.UICommand(
+                    "Copier",
+                    copyTextToClipboard(publicationBibTeX.join(""))));
+                msg.commands.append(
+                    new Windows.UI.Popups.UICommand("Close"));
+                msg.defaultCommandIndex = 0;
+                msg.cancelCommandIndex = 1;
+                msg.showAsync();
             },
 
             function error(err) {
@@ -199,5 +207,11 @@
                 WinJS.Navigation.navigate(adminHome, { key: hashedKey });
             }
         );
+    }
+
+    function copyTextToClipboard(textToCopy) {
+        var dataPackage = new Windows.ApplicationModel.DataTransfer.DataPackage();
+        dataPackage.setText(textToCopy);
+        Windows.ApplicationModel.DataTransfer.Clipboard.setContent(dataPackage);
     }
 })();
