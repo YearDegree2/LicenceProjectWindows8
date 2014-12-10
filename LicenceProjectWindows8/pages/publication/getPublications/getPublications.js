@@ -159,7 +159,7 @@
                     "Copier",
                     copyTextToClipboard(publicationBibTeX.join(""))));
                 msg.commands.append(
-                    new Windows.UI.Popups.UICommand("Close"));
+                    new Windows.UI.Popups.UICommand("Fermer"));
                 msg.defaultCommandIndex = 0;
                 msg.cancelCommandIndex = 1;
                 msg.showAsync();
