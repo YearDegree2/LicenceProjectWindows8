@@ -24,49 +24,7 @@
                         var idValues = [];
                         arrayPublication.forEach(
                             function displayPublications(element, index, array) {
-                                var table = document.getElementById("tbodyPublication");
-                                var line = table.insertRow(-1);
-                                var columnID = line.insertCell(0);
-                                columnID.innerHTML += element.ID;
-                                idValues.push(element.ID);
-                                var columnReference = line.insertCell(1);
-                                columnReference.innerHTML += element.reference;
-                                var columnAuteurs = line.insertCell(2);
-                                columnAuteurs.innerHTML += element.auteurs;
-                                var columnTitre = line.insertCell(3);
-                                columnTitre.innerHTML += element.titre;
-                                var columnDate = line.insertCell(4);
-                                columnDate.innerHTML += element.date;
-                                var columnJournal = line.insertCell(5);
-                                columnJournal.innerHTML += element.journal;
-                                var columnVolume = line.insertCell(6);
-                                columnVolume.innerHTML += element.volume;
-                                var columnNumber = line.insertCell(7);
-                                columnNumber.innerHTML += element.number;
-                                var columnPages = line.insertCell(8);
-                                columnPages.innerHTML += element.pages;
-                                var columnNote = line.insertCell(9);
-                                columnNote.innerHTML += element.note;
-                                var columnAbstract = line.insertCell(10);
-                                columnAbstract.innerHTML += element.abstract;
-                                var columnKeywords = line.insertCell(11);
-                                columnKeywords.innerHTML += element.keywords;
-                                var columnSeries = line.insertCell(12);
-                                columnSeries.innerHTML += element.series;
-                                var columnLocalite = line.insertCell(13);
-                                columnLocalite.innerHTML += element.localite;
-                                var columnPublisher = line.insertCell(14);
-                                columnPublisher.innerHTML += element.publisher;
-                                var columnEditor = line.insertCell(15);
-                                columnEditor.innerHTML += element.editor;
-                                var columnDateDisplay = line.insertCell(16);
-                                columnDateDisplay.innerHTML += element.date_display;
-                                var columnCategorieId = line.insertCell(17);
-                                columnCategorieId.innerHTML += element.categorie_id;
-                                var columnUpdate = line.insertCell(18);
-                                columnUpdate.innerHTML += "<input id=\"modify" + element.ID + "\" type=\"button\" value=\"Modifier\"";
-                                var columnDelete = line.insertCell(19);
-                                columnDelete.innerHTML += "<input id=\"delete" + element.ID + "\" type=\"button\" value=\"Supprimer\"";
+                                
                             }
                         );
                     }

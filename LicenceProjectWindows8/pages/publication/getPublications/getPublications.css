@@ -1,18 +1,3 @@
 ﻿.getPublications section[role=main] {
     overflow: auto;
 }
-
-#tablePublication {
-    margin: 50px auto;
-    border-collapse: collapse;
-    text-align: center;
-}
-
-th, td {
-    border: 3px solid white;
-    padding: 10px;
-}
-
-th {
-    min-width: 200px;
-}
