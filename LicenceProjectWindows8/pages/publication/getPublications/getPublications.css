@@ -2,17 +2,19 @@
     overflow: auto;
 }
 
-#tablePublication {
-    margin: 50px auto;
-    border-collapse: collapse;
-    text-align: center;
+#publications {
+    margin: 50px 0 0 50px;
 }
 
-th, td {
-    border: 3px solid white;
-    padding: 10px;
+.publication {
+    margin: 10px 0 30px 0;
 }
 
-th {
-    min-width: 200px;
+.bibtex {
+    width: 30px;
+    height:30px;
+}
+
+input[type="button"] {
+    margin-left: 10px;
 }
