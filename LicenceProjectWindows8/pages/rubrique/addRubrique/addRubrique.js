@@ -31,18 +31,6 @@
                         clickEventHandlerToAddRubrique(hashedKey);
                     }
                 });
-                document.getElementById("content_fr").addEventListener("keypress", function (e) {
-                    var key = e.which || e.keyCode;
-                    if (key == 13) {
-                        clickEventHandlerToAddRubrique(hashedKey);
-                    }
-                });
-                document.getElementById("content_en").addEventListener("keypress", function (e) {
-                    var key = e.which || e.keyCode;
-                    if (key == 13) {
-                        clickEventHandlerToAddRubrique(hashedKey);
-                    }
-                });
                 document.getElementById("actif").addEventListener("keypress", function (e) {
                     var key = e.which || e.keyCode;
                     if (key == 13) {

@@ -23,3 +23,7 @@ th {
     padding: 5px;
     position:absolute;
 }
+
+.content {
+    min-width: 600px;
+}

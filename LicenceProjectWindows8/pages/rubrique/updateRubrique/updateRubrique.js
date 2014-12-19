@@ -52,18 +52,6 @@
                             clickEventHandlerToUpdateRubrique(idRubrique, hashedKey);
                         }
                     });
-                    contentFR.addEventListener("keypress", function (e) {
-                        var key = e.which || e.keyCode;
-                        if (key == 13) {
-                            clickEventHandlerToUpdateRubrique(idRubrique, hashedKey);
-                        }
-                    });
-                    contentEN.addEventListener("keypress", function (e) {
-                        var key = e.which || e.keyCode;
-                        if (key == 13) {
-                            clickEventHandlerToUpdateRubrique(idRubrique, hashedKey);
-                        }
-                    });
                     actif.addEventListener("keypress", function (e) {
                         var key = e.which || e.keyCode;
                         if (key == 13) {

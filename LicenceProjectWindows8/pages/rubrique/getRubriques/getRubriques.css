@@ -16,3 +16,7 @@ th, td {
 th {
     min-width: 200px;
 }
+
+.content {
+    min-width: 600px;
+}

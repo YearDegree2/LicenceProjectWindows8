@@ -32,11 +32,11 @@
                                 var columnTitreFr = line.insertCell(1);
                                 columnTitreFr.innerHTML += element.titre_fr;
                                 var columnContentFr = line.insertCell(2);
-                                columnContentFr.innerHTML += element.content_fr;
+                                columnContentFr.innerText += element.content_fr;
                                 var columnTitreEn = line.insertCell(3);
                                 columnTitreEn.innerHTML += element.titre_en;
                                 var columnContentEn = line.insertCell(4);
-                                columnContentEn.innerHTML += element.content_en;
+                                columnContentEn.innerText += element.content_en;
                                 var columnDateCreation = line.insertCell(5);
                                 columnDateCreation.innerHTML += element.date_creation;
                                 var columnDateModification = line.insertCell(6);
